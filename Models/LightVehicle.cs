@@ -11,7 +11,8 @@ namespace Model
             string Brand,
             string Model,
             int Year,
-            double Price
+            double Price,
+            string Color
         ) : base(Brand, Model, Year, Price) {
             this.Id = LightVehicles.Count;
             this.Color = Color;
