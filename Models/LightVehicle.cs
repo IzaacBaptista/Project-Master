@@ -4,26 +4,24 @@ namespace Model
 {
     public class LightVehicle : Vehicle {
         public int Id { set; get; }
-        public string Restrictions { set; get; }
+        public string Color { set; get; }
 
         public static readonly List<LightVehicle> LightVehicles = new List<LightVehicle>();
         public LightVehicle(
             string Brand,
             string Model,
             int Year,
-            double Price,
-            string Color,
-            string Restrictions
+            double Price
         ) : base(Brand, Model, Year, Price) {
             this.Id = LightVehicles.Count;
-            this.Restrictions = Restrictions;
+            this.Color = Color;
 
             LightVehicles.Add(this);
         }
 
         public override string ToString()
         {
-            return base.ToString() + "\nRestrições: " + this.Restrictions;
+            return base.ToString() + "\nCor: " + this.Color;
         }
 
         public override bool Equals (object obj) {
