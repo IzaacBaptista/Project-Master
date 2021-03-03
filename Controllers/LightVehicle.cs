@@ -10,8 +10,7 @@ namespace Controller
             string Model,
             string Year,
             string Price,
-            string Color,
-            string Restrictions
+            string Color
         )
         {
             int ConvertYear = Convert.ToInt32(Year);
@@ -30,8 +29,7 @@ namespace Controller
                 Model,
                 ConvertYear,
                 ConvertPrice,
-                Color,
-                Restrictions
+                Color
             );
         }
 
