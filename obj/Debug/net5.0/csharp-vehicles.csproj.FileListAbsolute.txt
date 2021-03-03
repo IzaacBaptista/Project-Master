@@ -1,0 +1,16 @@
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/csharp-vehicles
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/csharp-vehicles.deps.json
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/csharp-vehicles.runtimeconfig.json
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/csharp-vehicles.runtimeconfig.dev.json
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/csharp-vehicles.dll
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/ref/csharp-vehicles.dll
+/home/izaac/Desktop/clone-git/Project-Master/bin/Debug/net5.0/csharp-vehicles.pdb
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.csprojAssemblyReference.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.GeneratedMSBuildEditorConfig.editorconfig
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.AssemblyInfoInputs.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.AssemblyInfo.cs
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.csproj.CoreCompileInputs.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.dll
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/ref/csharp-vehicles.dll
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.pdb
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/csharp-vehicles.genruntimeconfig.cache
