@@ -1,6 +1,6 @@
-using System;
+﻿using System;
 
-namespace csharp_vehicles
+namespace project_CSharp
 {
     public class Program
     {
@@ -21,6 +21,8 @@ namespace csharp_vehicles
                 Console.WriteLine("4 - Lista de Veículos Pesados");
                 Console.WriteLine("5 - Cadastrar Veículo Leve");
                 Console.WriteLine("6 - Lista de Veículos Leves");
+                Console.WriteLine("6 - Cadastrar locação");
+                Console.WriteLine("6 - Lista de locações");
                 Console.WriteLine("0 - Sair");
                 // Get the user option
                 opt = Convert.ToInt32(Console.ReadLine());
@@ -45,6 +47,12 @@ namespace csharp_vehicles
                         break;
                     case 6:
                         View.LightVehicle.ListVehicles();
+                        break;
+                    case 7:
+                        View.Rent.CreateRent();
+                        break;
+                    case 8:
+                        View.Rent.ListRents();
                         break;
                     default:
                         Console.WriteLine("Operação Inválida.");
