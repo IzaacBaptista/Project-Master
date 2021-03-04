@@ -167,5 +167,14 @@ namespace Model
         public static void AddCustomer(Customer customer) {
             customers.Add(customer);
         }
+
+        public static Customer GetCustomer(string Id) {
+            return customers[Id];
+        }
+
+        public static bool VerifyCustomer(int Id)
+        {
+            return Id >= customers.Count;
+        }
     }
 }
