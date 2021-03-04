@@ -7,9 +7,9 @@ namespace Views
     {
         public static void CreateRent()
         {
-            System.Console.WriteLine("");
+            System.Console.WriteLine("Insira o Id do cliente");
             string IdCustomer = Console.ReadLine();
-            System.Console.WriteLine("");
+            System.Console.WriteLine("Insira a data de locação");
             string RentDate = Console.ReadLine();
         }
 
