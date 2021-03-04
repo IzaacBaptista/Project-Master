@@ -7,7 +7,8 @@ namespace Models
         public int Id { set; get;}
         public Customer Customer { set; get; }
         public DateTime RentDate { set; get; }
-        public static readonly List<Rent> Rents = new ();
+        //public static readonly List<Rent> Rents = new ();
+        public static readonly List<Rent> Rents = new List<Rent>();
 
         public Rent(
             Customer Customer, 
@@ -37,7 +38,22 @@ namespace Models
                 return false;
             }
             Rent rent = (Rent) obj;
-            return this.GetHashCode () == lightVehicle.GetHashCode ();
+            return this.GetHashCode () == rent.GetHashCode ();
+        }
+
+        public override int GetHashCode()
+        {
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = (int) 2166136261;
+                // Suitable nullity checks etc, of course :)
+                hash = (hash * 16777619) ^ this.Id.GetHashCode();
+                return hash;
+            }
+        }
+
+        public static List<Rent> GetRents() {
+            return Rent;
         }
 
     }
