@@ -59,5 +59,12 @@ namespace Controller
         public static List<Model.Customer> ListCustomers() {
             return Model.Customer.GetCustomers();
         }
+
+        public static Models.Customer GetCustomer(int Id) {
+            if (Id < 0 || Model.Customer.GetCustomers(Id))    {
+                throw new Exception("id informado é invalido");
+            }
+            return Model.Customer.GetCustomer(Id);
+        }
     }
 }
