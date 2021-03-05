@@ -15,9 +15,9 @@ namespace Views
 
         public static void ListRents()  
         {
-            List<Model.Rent> Rents = Controller.Rent.GetRents();
+            List<Models.Rent> Rents = Controllers.Rent.GetRents();
 
-            foreach (Model.Rent Rent in Rents)
+            foreach (Models.Rent Rent in Rents)
             {
                 System.Console.WriteLine("--------------------------------------");
                 System.Console.WriteLine(Rent);
