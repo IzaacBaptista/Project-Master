@@ -5,16 +5,16 @@ namespace Controllers
 {
     public class Rent
     {
-        public static Model.Rent CreatRent(
+        public static Models.Rent CreatRent(
             string IdCustomer,
             string StringRentDate
         )  
         {
-            Model.Customer Customer = Controllers.Customer.GetCustomer(Convert.ToInt32(IdCustomer));
+            Models.Customer Customer = Controllers.Customer.GetCustomer(Convert.ToInt32(IdCustomer));
             
             DateTime RentDate = DateTime.Today;
 
-            return new Model.Rent.Rent(Customer, RentDate);
+            return new Models.Rent(Customer, RentDate);
         }
 
         public static List<Models.Rent> GetRents()
