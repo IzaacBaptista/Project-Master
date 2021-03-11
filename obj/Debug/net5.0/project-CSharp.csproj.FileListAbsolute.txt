@@ -1,0 +1,5 @@
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/project-CSharp.csprojAssemblyReference.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/project-CSharp.GeneratedMSBuildEditorConfig.editorconfig
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/project-CSharp.AssemblyInfoInputs.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/project-CSharp.AssemblyInfo.cs
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/net5.0/project-CSharp.csproj.CoreCompileInputs.cache

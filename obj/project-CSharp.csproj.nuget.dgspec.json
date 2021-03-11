@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "/home/izaac/Desktop/clone-git/Project-Master/csharp-vehicles.csproj": {}
+    "/home/izaac/Desktop/clone-git/Project-Master/project-CSharp.csproj": {}
   },
   "projects": {
-    "/home/izaac/Desktop/clone-git/Project-Master/csharp-vehicles.csproj": {
+    "/home/izaac/Desktop/clone-git/Project-Master/project-CSharp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/izaac/Desktop/clone-git/Project-Master/csharp-vehicles.csproj",
-        "projectName": "csharp-vehicles",
-        "projectPath": "/home/izaac/Desktop/clone-git/Project-Master/csharp-vehicles.csproj",
+        "projectUniqueName": "/home/izaac/Desktop/clone-git/Project-Master/project-CSharp.csproj",
+        "projectName": "project-CSharp",
+        "projectPath": "/home/izaac/Desktop/clone-git/Project-Master/project-CSharp.csproj",
         "packagesPath": "/home/izaac/.nuget/packages/",
         "outputPath": "/home/izaac/Desktop/clone-git/Project-Master/obj/",
         "projectStyle": "PackageReference",
