@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace project_CSharp
+namespace csharp_vehicles
 {
     public class Program
     {
@@ -8,9 +8,9 @@ namespace project_CSharp
         /// Start the system
         /// </summary>
         /// <param name="args"></param>
-        public static void Main(string[] args)
+        public static void Main()
         {
-            int opt = 0;
+            int opt;
             Console.WriteLine("Bem vindo a nossa revenda");
             // Always repeat until the user leaves
             do {
@@ -21,8 +21,9 @@ namespace project_CSharp
                 Console.WriteLine("4 - Lista de Veículos Pesados");
                 Console.WriteLine("5 - Cadastrar Veículo Leve");
                 Console.WriteLine("6 - Lista de Veículos Leves");
-                Console.WriteLine("6 - Cadastrar locação");
-                Console.WriteLine("6 - Lista de locações");
+                Console.WriteLine("7 - Cadastrar Locação");
+                Console.WriteLine("8 - Lista de Locações");
+                Console.WriteLine("9 - Importar Informações");
                 Console.WriteLine("0 - Sair");
                 // Get the user option
                 opt = Convert.ToInt32(Console.ReadLine());
@@ -53,6 +54,9 @@ namespace project_CSharp
                         break;
                     case 8:
                         View.Rent.ListRents();
+                        break;
+                    case 9:
+                        View.Import.DBImport();
                         break;
                     default:
                         Console.WriteLine("Operação Inválida.");

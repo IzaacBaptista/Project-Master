@@ -1,25 +1,38 @@
 using System;
+using System.Text.RegularExpressions;
 using System.Collections.Generic;
 
-namespace Controllers
+namespace Controller
 {
-    public class Rent
-    {
-        public static Models.Rent CreatRent(
+    public class Rent {
+        public static Model.Rent CreateRent(
             string IdCustomer,
-            string StringRentDate
-        )  
-        {
-            Models.Customer Customer = Controllers.Customer.GetCustomer(Convert.ToInt32(IdCustomer));
-            
-            DateTime RentDate = DateTime.Today;
+            string StringRentDate,
+            List<Model.LightVehicle> LightVehicles
+        ) {
+            Model.Customer Customer = Controller.Customer
+                .GetCustomer(Convert.ToInt32(IdCustomer));
+            // Regex rgxDate = new ("^\\d{2}\\/\\d{2}\\/\\d{4}$");
+            // if (!rgxDate.IsMatch (StringRentDate)) {
+            //     throw new Exception ("Data de Locação em formato inválido");
+            // }
+            DateTime RentDate;
 
-            return new Models.Rent(Customer, RentDate);
+            try {
+                RentDate = Convert.ToDateTime(StringRentDate);
+            } catch {
+                RentDate = DateTime.Now;
+            }
+
+            if (RentDate > DateTime.Now) {
+                throw new Exception ("Data de Locação não pode ser maior que a data atual");
+            }
+
+            return new Model.Rent(Customer, RentDate, LightVehicles);
         }
 
-        public static List<Models.Rent> GetRents()
-        {
-            return Models.Rent.GetRents();
+        public static List<Model.Rent> GetRents() {
+            return Model.Rent.GetRents();
         }
     }
 }

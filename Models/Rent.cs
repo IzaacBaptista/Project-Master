@@ -1,36 +1,57 @@
 using System;
 using System.Collections.Generic;
-namespace Models
+
+namespace Model
 {
-    public class Rent
-    {
-        public int Id { set; get;}
-        public Customer Customer { set; get; }
-        public DateTime RentDate { set; get; }
-        //public static readonly List<Rent> Rents = new ();
-        public static readonly List<Rent> Rents = new List<Rent>();
+    public class Rent {
+        public int Id {set; get;} // Identificador Único (ID)
+        public int CustomerId { set; get; } // Identificador Único do Cliente
+        public Customer Customer { set; get; } // Cliente
+        public DateTime RentDate { set; get; }// Data de Locação
+
+        public List<RentLightVehicle> LightVehicles { set; get; }
+
+        public static readonly List<Rent> Rents = new ();
 
         public Rent(
             Customer Customer, 
-            DateTime RentDate
+            DateTime RentDate,
+            List<LightVehicle> LightVehicles
         ) {
             this.Customer = Customer;
+            this.CustomerId = Customer.Id;
             this.RentDate = RentDate;
+            this.LightVehicles = new ();
 
+            foreach (LightVehicle vehicle in LightVehicles)
+            {
+                RentLightVehicle rentLightVehicle = new (this, vehicle);
+                this.LightVehicles.Add(rentLightVehicle);
+            }
+            
             Rents.Add(this);
         }
 
-        public override ToString()
+        public override string ToString()
         {
-            return String.Format(
-                "Data de locação: {0}\nClient: {1}",
-                this.RentDate,
+            // Data da Locação: 04/03/2021
+            // Id: 0 - Nome: João
+            string Print = String.Format(
+                "Data da Locação: {0:d}\nCliente: {1}", 
+                this.RentDate, 
                 this.Customer
             );
+            Print += "\nVeículos Leves Locados: ";
+            foreach (RentLightVehicle vehicle in LightVehicles)
+            {
+                Print += "\n" + vehicle.LightVehicle;
+            }
+
+            return Print;
         }
 
-
-        public override bool Equals (object obj) {
+        public override bool Equals(object obj)
+        {
             if (obj == null) {
                 return false;
             }
@@ -41,19 +62,12 @@ namespace Models
             return this.GetHashCode () == rent.GetHashCode ();
         }
 
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = (int) 2166136261;
-                // Suitable nullity checks etc, of course :)
-                hash = (hash * 16777619) ^ this.Id.GetHashCode();
-                return hash;
-            }
+        public override int GetHashCode () {
+            return HashCode.Combine (this.Id);
         }
 
         public static List<Rent> GetRents() {
-            return Rent;
+            return Rents;
         }
 
     }
