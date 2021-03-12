@@ -1,28 +1,27 @@
+using System;
 using System.Collections.Generic;
 
-namespace Model
-{
+namespace Model {
     public class HeavyVehicle : Vehicle {
         public int Id { set; get; }
         public string Restrictions { set; get; }
 
-        public static readonly List<HeavyVehicle> HeavyVehicles = new List<HeavyVehicle>();
-        public HeavyVehicle(
+        public static readonly List<HeavyVehicle> HeavyVehicles = new ();
+        public HeavyVehicle (
             string Brand,
             string Model,
             int Year,
             double Price,
             string Restrictions
-        ) : base(Brand, Model, Year, Price) {
+        ) : base (Brand, Model, Year, Price) {
             this.Id = HeavyVehicles.Count;
             this.Restrictions = Restrictions;
 
-            HeavyVehicles.Add(this);
+            HeavyVehicles.Add (this);
         }
 
-        public override string ToString()
-        {
-            return base.ToString() + "\nRestrições: " + this.Restrictions;
+        public override string ToString () {
+            return base.ToString () + "\nRestrições: " + this.Restrictions;
         }
 
         public override bool Equals (object obj) {
@@ -36,18 +35,11 @@ namespace Model
             return this.GetHashCode () == heavyVehicle.GetHashCode ();
         }
 
-        public override int GetHashCode()
-        {
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = (int) 2166136261;
-                // Suitable nullity checks etc, of course :)
-                hash = (hash * 16777619) ^ this.Id.GetHashCode();
-                return hash;
-            }
+        public override int GetHashCode () {
+            return HashCode.Combine (this.Id);
         }
 
-        public static List<HeavyVehicle> GetHeavyVehicles() {
+        public static List<HeavyVehicle> GetHeavyVehicles () {
             return HeavyVehicles;
         }
     }
