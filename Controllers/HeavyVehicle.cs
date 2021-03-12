@@ -32,6 +32,7 @@ namespace Controller {
 
         public static List<Model.HeavyVehicle> GetHeavyVehicles () {
             return Model.HeavyVehicle.GetHeavyVehicles ();
+<<<<<<< HEAD
         }
 
         public static Model.HeavyVehicle GetHeavyVehicle(int Id) {
@@ -42,6 +43,8 @@ namespace Controller {
             }
 
             return Model.HeavyVehicle.GetHeavyVehicle(Id);
+=======
+>>>>>>> 3d336419708b52e508f8428b4e1f3ba91538f6be
         }
     }
 }

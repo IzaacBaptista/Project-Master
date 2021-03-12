@@ -1,0 +1,4 @@
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/netcoreapp3.1/project-CSharp.csprojAssemblyReference.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/netcoreapp3.1/project-CSharp.AssemblyInfoInputs.cache
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/netcoreapp3.1/project-CSharp.AssemblyInfo.cs
+/home/izaac/Desktop/clone-git/Project-Master/obj/Debug/netcoreapp3.1/project-CSharp.csproj.CoreCompileInputs.cache
